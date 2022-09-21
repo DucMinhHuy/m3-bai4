@@ -40,3 +40,4 @@ SELECT S.studentID,S.studentName,AVG(mark) FROM student S join mark M on S.stude
 GROUP BY S.studentID, S.studentName
     # HAVING AVG(mark)>9;
 HAVING AVG(mark)>=ALL (SELECT AVG(mark) FROM mark GROUP BY mark.studentID);
+SELECT  MAX(credit) AS maxCredit FROM subject;
